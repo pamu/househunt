@@ -1,3 +1,6 @@
+.idea
+target
+*.iml
 # Built application files
 *.apk
 *.ap_

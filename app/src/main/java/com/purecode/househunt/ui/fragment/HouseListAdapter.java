@@ -133,10 +133,10 @@ class HouseViewHolder extends RecyclerView.ViewHolder {
         rent.setText("Rent " + toReadableMoney(house.getmRent()));
         deposit.setText("Deposit " + toReadableMoney(house.getmDeposit()));
         listingId.setText("Listing ID: " + house.getmListingId() + "");
-        if (house.getImages().size() > 1) {
-            Bitmap bitmap = getBitmapFromMemCache(house.getImages().get(1));
+        if (house.getImages().size() > 2) {
+            Bitmap bitmap = getBitmapFromMemCache(house.getImages().get(2));
             if (bitmap == null) {
-                new BitmapWorkerTask().execute(new String[]{house.getImages().get(1)});
+                new BitmapWorkerTask().execute(new String[]{house.getImages().get(2)});
             } else {
                 listingImage.setImageBitmap(bitmap);
             }
